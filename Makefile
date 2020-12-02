@@ -52,7 +52,7 @@ srv:
 	poetry run python manage.py runserver
 
 hc:
-	poetry run http GET $(base_url)/healthcheck/
+	curl -w "\n" $(base_url)/healthcheck/
 
 #
 # 📦 DEPENDENCIES
