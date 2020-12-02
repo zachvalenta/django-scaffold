@@ -1,3 +1,6 @@
 from django.test import TestCase
 
-# Create your tests here.
+class HealthcheckTest(TestCase):
+    def test_healthcheck(self):
+        res = self.client.get('/healthcheck/')
+        self.assertEqual(res.status_code, 200)

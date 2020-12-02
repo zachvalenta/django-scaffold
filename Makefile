@@ -1,3 +1,5 @@
+.PHONY: test
+
 base_url = "http://localhost:8000"
 
 help:
@@ -16,6 +18,7 @@ help:
 	@echo
 	@echo "srv:        run dev server"
 	@echo "hc:         GET healthcheck endpoint"
+	@echo "test:       run tests"
 	@echo
 	@echo "📦 DEPENDENCIES"
 	@echo
@@ -53,6 +56,9 @@ srv:
 
 hc:
 	curl -w "\n" $(base_url)/healthcheck/
+
+test:
+	poetry run python manage.py test
 
 #
 # 📦 DEPENDENCIES
