@@ -10,8 +10,6 @@ help:
 	@echo
 	@echo "create:     make migration"
 	@echo "apply:      apply migration"
-	@echo "super:      create superuser"
-	@echo "admin:      open admin in browser"
 	@echo "drop:       drop sqlite db file"
 	@echo
 	@echo "🛠  UTILS"
@@ -19,6 +17,8 @@ help:
 	@echo "srv:        run dev server"
 	@echo "hc:         GET healthcheck endpoint"
 	@echo "test:       run tests"
+	@echo "super:      create superuser"
+	@echo "admin:      open admin in browser"
 	@echo
 	@echo "📦 DEPENDENCIES"
 	@echo
@@ -41,12 +41,6 @@ apply:
 super:
 	echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@admin.com', 'pass')" | poetry run python manage.py shell
 
-admin:
-	open $(base_url)/admin
-
-drop:
-	rm db.sqlite3
-
 #
 # 🛠 UTILS
 #
@@ -59,6 +53,12 @@ hc:
 
 test:
 	poetry run python manage.py test
+
+admin:
+	open $(base_url)/admin
+
+drop:
+	rm db.sqlite3
 
 #
 # 📦 DEPENDENCIES

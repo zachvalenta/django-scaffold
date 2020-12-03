@@ -1,6 +1,6 @@
 # what is this?
 
-Scaffold for Django apps. Basic project setup + Makefile.
+Scaffold for Django apps. Basic project setup + healthcheck, testing, Makefile.
 
 # where to start?
 
@@ -17,14 +17,15 @@ Scaffold for Django apps. Basic project setup + Makefile.
 
 create:     make migration
 apply:      apply migration
-super:      create superuser
-admin:      open admin in browser
 drop:       drop sqlite db file
 
 🛠  UTILS
 
 srv:        run dev server
 hc:         GET healthcheck endpoint
+test:       run tests
+super:      create superuser
+admin:      open admin in browser
 
 📦 DEPENDENCIES
 
