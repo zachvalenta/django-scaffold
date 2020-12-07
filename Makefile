@@ -14,6 +14,7 @@ help:
 	@echo
 	@echo "🛠  UTILS"
 	@echo
+	@echo "env:        set env var"
 	@echo "srv:        run dev server"
 	@echo "hc:         GET healthcheck endpoint"
 	@echo "test:       run tests"
@@ -44,6 +45,9 @@ super:
 #
 # 🛠 UTILS
 #
+
+env:
+	ln -sf .env.dev .env
 
 srv:
 	poetry run python manage.py runserver

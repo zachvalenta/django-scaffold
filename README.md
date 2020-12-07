@@ -5,9 +5,10 @@ Scaffold for Django apps. Basic project setup + healthcheck, testing, Makefile.
 # where to start?
 
 * __install dependencies__: `poetry install`
+* __set env var__: `make env`
 * __apply migrations__: `make apply`
 * __run dev server__: `make srv`
-* __hit healthcheck endpoint__: `make srv`
+* __hit healthcheck endpoint__: `make hc`
 * __everything else__: `make help`
 
 ```Makefile
@@ -21,6 +22,7 @@ drop:       drop sqlite db file
 
 🛠  UTILS
 
+env:        set env var
 srv:        run dev server
 hc:         GET healthcheck endpoint
 test:       run tests
