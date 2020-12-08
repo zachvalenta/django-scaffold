@@ -1,6 +1,12 @@
 # what is this?
 
-Scaffold for Django apps. Basic project setup + healthcheck, testing, Makefile.
+Scaffold for Django apps.
+
+* project/app setup
+* env var
+* healthcheck
+* testing
+* docs (README, Makefile)
 
 # where to start?
 
