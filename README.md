@@ -10,12 +10,17 @@ Scaffold for Django apps.
 
 # where to start?
 
-* __install dependencies__: `poetry install`
-* __set env var__: `make env`
-* __apply migrations__: `make apply`
-* __run dev server__: `make srv`
-* __hit healthcheck endpoint__: `make hc`
-* __everything else__: `make help`
+Use the `Makefile`:
+
+|                       |                  |
+|-----------------------|------------------|
+| install dependencies  | `poetry install` |
+| set env var           | `make env`       |
+| apply migrations      | `make apply`     |
+| run dev server        | `make srv`       |
+| hit healthcheck       | `make hc`        |
+
+Here's the full list of `Makefile` rules:
 
 ```Makefile
 ==================================================
